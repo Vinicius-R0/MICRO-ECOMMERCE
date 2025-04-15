@@ -1,0 +1,43 @@
+[
+    {
+        "id": 1,
+        "name": "A MÁGIA DE PENSAR GRANDE",
+        "author": "DAVID J. SCHAWATZ",
+        "quantity": "7823",
+        "price": "20.20",
+        "photo": "img/products/imagem.png"
+    },
+    {
+        "id": 2,
+        "name": "A MÁGIA DE PENSAR GRANDE",
+        "author": "DAVID J. SCHAWATZ",
+        "quantity": "7823",
+        "price": "20.20",
+        "photo": "img/products/imagem.png"
+    },
+    {
+        "id": 3,
+        "name": "A MÁGIA DE PENSAR GRANDE",
+        "author": "DAVID J. SCHAWATZ",
+        "quantity": "7823",
+        "price": "20.20",
+        "photo": "img/products/imagem.png"
+    },
+    {
+        "id": 4,
+        "name": "A MÁGIA DE PENSAR GRANDE",
+        "author": "DAVID J. SCHAWATZ",
+        "quantity": "7823",
+        "price": "20.20",
+        "photo": "img/products/imagem.png"
+    },
+    {
+        "id": 5,
+        "name": "A MÁGIA DE PENSAR GRANDE",
+        "author": "DAVID J. SCHAWATZ",
+        "quantity": "7823",
+        "price": "20.20",
+        "photo": "img/products/imagem.png"
+    }
+    
+]

@@ -1,0 +1,29 @@
+//define a versão da sintaxe do Protocol Biffers utilizada 
+syntax = "proto3";
+
+//define um serviço chamado InventoryService
+service InventoryService {
+  //define um método chamado AddItem que recebe um Item e retorna um Item
+  rpc SearchAllProducts(Empty)
+   returns (ProductsResponse) {};
+}
+
+//mensagem vazia usada comno entrada para o método SearchAllProducts
+//util quando não há dados a serem enviados
+message Empty {}
+
+//define o formato de um produto
+message ProductsResponse{
+    int32 id = 1; //identificador do produto(inteiro de 32 bits)
+    string name = 2; //nome do produto(string)
+    int32 quantity = 3; //quantidade disponivel no estoque 
+    float price = 4; //preço do produto(float)
+    string photo = 5; //URL da foto do produto(string)
+    string author = 6; //autor do produto(string)
+}
+
+//define a estrutura da resposta do metodo SearchAllProducts
+//contem uma lista de produtos (repeated = array/lista)
+message ProductsResponse {
+    repeated Product products = 1; //lista de produtos
+}

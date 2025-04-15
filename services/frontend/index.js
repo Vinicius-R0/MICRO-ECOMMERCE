@@ -60,3 +60,40 @@ function calculateShipping(id, cep) {
     console.error(err);
   });
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+  const books = document.querySelector('.books');
+
+  fetch('http://localhost:3000/products')
+  .then((data) => {
+    if (data.ok) {
+      return data.json();
+    }
+    throw data.statusText;
+})
+.then((data) => {
+  if(data) {
+    data.forEach((book) => {
+      books.appendChild(newBook(book));
+    });
+
+    document.querySelectorAll('.button-shipping').forEach((button) => {
+      button.addEventListener('click', (e) => {
+        const id = e.target.getAttribute('data-id');
+        const cep = document.querySelector(`.book[data-id="${id}"] input`).value;
+        calculateShipping(id, cep);
+      });
+    });
+
+    document.querySelectorAll('.button-buy').forEach((btn) => {
+      btn.addEventListener('click', (e) => {
+        swal('Compra de livro', 'Sua compra foi realizada com secesso', 'success');
+      });
+    });
+  }
+})
+.catch((err) => {
+  swal('Erro', 'Erro ao listar os produtos','error');
+  console.error(err);
+})
+});
